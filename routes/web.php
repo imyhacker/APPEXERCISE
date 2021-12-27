@@ -4,6 +4,7 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\JurnalController;
 use App\Http\Controllers\KeuanganController;
 use App\Http\Controllers\PengaturanController;
+use App\Http\Controllers\RAController;
 use App\Http\Controllers\SiswaController;
 use Facade\FlareClient\Http\Client;
 use Illuminate\Support\Facades\Route;
@@ -88,4 +89,9 @@ Route::group(['prefix' => 'home/jurnal'], function($slug_blog = NULL, $id = NULL
 Route::group(['prefix' => 'home/pengaturan', ['middleware'=> 'can:isAdmin']], function(){
     Route::get('/', [PengaturanController::class, 'index'])->name('pengaturan');
     Route::post('/upload', [PengaturanController::class, 'upload'])->name('upload');
+});
+
+
+Route::group(['prefix' => 'home/rest', 'middleware'=> 'can:isAdmin'], function(){
+    Route::get('rest_siswa', [RAController::class, 'rest_siswa'])->name('rest_siswa');
 });

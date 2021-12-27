@@ -62,6 +62,16 @@
                     <li><a class="nav-link" href="{{route('pengaturan')}}">Pengaturan</a></li>
                 </ul>
             </li> 
+            <li class="dropdown">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-rocket"></i> <span>Rest API</span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="{{route('rest_siswa')}}">Siswa</a></li>
+                    <li><a class="nav-link" href="{{route('pengaturan')}}">Absensi</a></li>
+                    <li><a class="nav-link" href="{{route('pengaturan')}}">Keuangan</a></li>
+                    <li><a class="nav-link" href="{{route('pengaturan')}}">Jurnal</a></li>
+
+                </ul>
+            </li> 
             @endcan
         </ul>
         @can('isAdmin')

@@ -7,7 +7,7 @@
         <div class="row g-4 portfolio-container">
         @foreach($blog as $bb)
 
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-4 col-md-6 mt-4 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
                 <div class="rounded overflow-hidden">
                    
                     <div class="bg-light p-4">
