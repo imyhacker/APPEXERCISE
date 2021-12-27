@@ -43,6 +43,6 @@ Route::group(['prefix' => 'v2/'.$key_blog.'/blog'], function(){
 
 Route::group(['prefix' => 'v2/'.$key_absen.'/absen'], function(){
     Route::get('data_absen', [AbsenController::class, 'data_absen']);
-    Route::post('data_blog/upload', [BlogController::class, 'upload_blog']);
-    Route::get('data_blog/hapus/{id?}', [BlogController::class, 'hapus_blog']);
+    Route::get('data_absen/reset/{id?}', [AbsenController::class, 'reset_absen']);
+    Route::post('data_absen/absen', [AbsenController::class, 'absen_absen']);
 });
