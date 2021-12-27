@@ -41,9 +41,9 @@
                                                     <input type="hidden" name="nama" class="form-control"
                                                         value="{{$t->name}}" readonly></td>
                                                         <td style="text-transform: uppercase;">
-                                                    {{$t->kelas}}
+                                                    {{$t->kelas}}{{$t->tipe_kelas}}
                                                     <input type="hidden" name="kelas" class="form-control"
-                                                        value="{{$t->kelas}}" readonly></td>
+                                                        value="{{$t->kelas}}{{$t->tipe_kelas}}" readonly></td>
                                                 <td>
                                                     
                                                     <a href="{{route('reset', $t->name)}}" class="btn btn-outline-danger btn-sm btn-block"><i
