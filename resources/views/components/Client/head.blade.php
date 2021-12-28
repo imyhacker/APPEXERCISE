@@ -1,13 +1,28 @@
 
 <head>
     <meta charset="utf-8">
-    <title>{{config('app.name')}}-@-{{date('Y')}}</title>
+ 
+<!-- Primary Meta Tags -->
+<title>Exercise SMK Telematika Indramayu | Indramayu, {{date('d M Y')}}</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+<meta name="title" content="Exercise SMK Telematika Indramayu">
+<meta name="description" content="Exercise adalah sebuah Ekstrakulikuler yang berfokuskan pada komputer dan pemograman, yang berada di SMK Telematika Indramayu.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://exercise.smktelematikaindramayu.sch.id">
+<meta property="og:title" content="Exercise SMK Telematika Indramayu">
+<meta property="og:description" content="Exercise adalah sebuah Ekstrakulikuler yang berfokuskan pada komputer dan pemograman, yang berada di SMK Telematika Indramayu.">
+<meta property="og:image" content="https://exercise.smktelematikaindramayu.sch.id/assets/img/logo.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://exercise.smktelematikaindramayu.sch.id">
+<meta property="twitter:title" content="Exercise SMK Telematika Indramayu">
+<meta property="twitter:description" content="Exercise adalah sebuah Ekstrakulikuler yang berfokuskan pada komputer dan pemograman, yang berada di SMK Telematika Indramayu.">
+<meta property="twitter:image" content="https://exercise.smktelematikaindramayu.sch.id/assets/img/logo.jpg">
+
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
