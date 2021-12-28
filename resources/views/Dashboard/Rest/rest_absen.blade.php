@@ -201,7 +201,7 @@
                     </div>
                     <div class="modal-body">
                         <pre>
- {
+{
     "success": true,
     "message": "Data Baru Berhasil Disimpan!",
     "data": {
