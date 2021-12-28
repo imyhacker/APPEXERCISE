@@ -66,8 +66,8 @@
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-rocket"></i> <span>Rest API</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{route('rest_siswa')}}">Siswa</a></li>
-                    <li><a class="nav-link" href="{{route('pengaturan')}}">Absensi</a></li>
-                    <li><a class="nav-link" href="{{route('pengaturan')}}">Keuangan</a></li>
+                    <li><a class="nav-link" href="{{route('rest_absen')}}">Absensi</a></li>
+                    <li><a class="nav-link" href="{{route('rest_keuangan')}}">Keuangan</a></li>
                     <li><a class="nav-link" href="{{route('pengaturan')}}">Jurnal</a></li>
 
                 </ul>

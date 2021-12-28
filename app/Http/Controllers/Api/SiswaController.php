@@ -20,9 +20,9 @@ class SiswaController extends Controller
             'data' => $posts
         ], 200);
     }
-    public function cari_siswa(Request $request)
+    public function cari_siswa($id)
     {
-        $post = User::whereId($request->input('id'))->first();
+        $post = User::whereId($id)->first();
 
 
         if ($post) {

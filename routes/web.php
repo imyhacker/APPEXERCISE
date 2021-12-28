@@ -94,4 +94,6 @@ Route::group(['prefix' => 'home/pengaturan', ['middleware'=> 'can:isAdmin']], fu
 
 Route::group(['prefix' => 'home/rest', 'middleware'=> 'can:isAdmin'], function(){
     Route::get('rest_siswa', [RAController::class, 'rest_siswa'])->name('rest_siswa');
+    Route::get('rest_absen', [RAController::class, 'rest_absen'])->name('rest_absen');
+    Route::get('rest_keuangan', [RAController::class, 'rest_keuangan'])->name('rest_keuangan');
 });

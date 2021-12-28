@@ -32,7 +32,7 @@ $key_keuangan = '81269c0a261b22bc2a70c4cb7a6f8557a6414046450315e3a027f384baf9457
 
 Route::group(['prefix' => 'v2/'.$key_siswa.'/siswa'], function(){
     Route::get('data_siswa', [SiswaController::class, 'data_siswa']);
-    Route::post('data_siswa/cari/{id?}', [SiswaController::class, 'cari_siswa']);
+    Route::get('data_siswa/cari/{id?}', [SiswaController::class, 'cari_siswa']);
     Route::post('data_siswa/upload', [SiswaController::class, 'upload_siswa']);
     Route::delete('data_siswa/hapus/{id?}', [SiswaController::class, 'hapus_siswa']);
 });

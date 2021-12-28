@@ -10,4 +10,12 @@ class RAController extends Controller
     {
         Return view('Dashboard/Rest/rest_siswa');    
     }
+    public function rest_absen()
+    {
+        return view('Dashboard/Rest/rest_absen');
+    }
+    public function rest_keuangan()
+    {
+        return view('Dashboard/Rest/rest_keuangan');
+    }
 }
