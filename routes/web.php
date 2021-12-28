@@ -35,7 +35,7 @@ Route::group(['prefix' => '/'], function($slug_baca = NULL){
     Route::post('/send_mail', [ClientController::class, 'send_mail'])->name('send_mail');
 });
 
-Auth::routes();
+Auth::routes(['register'=>false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -96,4 +96,5 @@ Route::group(['prefix' => 'home/rest', 'middleware'=> 'can:isAdmin'], function()
     Route::get('rest_siswa', [RAController::class, 'rest_siswa'])->name('rest_siswa');
     Route::get('rest_absen', [RAController::class, 'rest_absen'])->name('rest_absen');
     Route::get('rest_keuangan', [RAController::class, 'rest_keuangan'])->name('rest_keuangan');
+    Route::get('rest_jurnal', [RAController::class, 'rest_jurnal'])->name('rest_jurnal');
 });

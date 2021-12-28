@@ -24,7 +24,7 @@
                                         value="83f5872d23747fa1fd5f714d5ca7b6954bbbca115809765a721886c19dc67fcf"
                                         readonly>
                                 </div>
-                                <table class="table">
+                                <table class="table table-hover">
                                     <thead>
                                         <tr>
                                             <th>For</th>
@@ -111,7 +111,7 @@
                                             </td>
                                             <td>
                                                 <button type="button" class="btn btn-primary" data-toggle="modal"
-                                                    data-target="#responseTambahDataAbsen">
+                                                    data-target="#responeTambahDataAbsen">
                                                     Look Response
                                                 </button>
                                             </td>
@@ -134,7 +134,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Example Response Data Absen</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -160,7 +160,6 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
@@ -170,7 +169,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Example Response Reset Absen</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -185,7 +184,39 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="modal fade" id="responeTambahDataAbsen" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Example Response Tambah Absen</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <pre>
+ {
+    "success": true,
+    "message": "Data Baru Berhasil Disimpan!",
+    "data": {
+        "nama": "KKK",
+        "kelas": "XIA",
+        "kehadiran": "alfa",
+        "updated_at": "2021-12-28T15:12:03.000000Z",
+        "created_at": "2021-12-28T15:12:03.000000Z",
+        "id": 8
+    }
+}
+            </pre>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>

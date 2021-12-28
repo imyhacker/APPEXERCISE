@@ -22,7 +22,7 @@
                                   </div>
                                   <input type="text" class="form-control" id="inlineFormInputGroupUsername" value="bc47001fe24b404be7c37ef886520d8bcd487e3f19ddc05d3fae51516ad2d669" readonly>
                                 </div>
-                                <table class="table">
+                                <table class="table table-hover">
                                     <thead>
                                         <tr>
                                             <th>For</th>
@@ -132,7 +132,7 @@
                                             </td>
                                             <td>
                                                 <code>
-                                                    parameter => {id}
+                                                    id
                                                 </code>
                                             </td>
                                             <td>

@@ -39,7 +39,7 @@ Route::group(['prefix' => 'v2/'.$key_siswa.'/siswa'], function(){
 Route::group(['prefix' => 'v2/'.$key_blog.'/blog'], function(){
     Route::get('data_blog', [BlogController::class, 'data_blog']);
     Route::post('data_blog/upload', [BlogController::class, 'upload_blog']);
-    Route::get('data_blog/hapus/{id?}', [BlogController::class, 'hapus_blog']);
+    Route::delete('data_blog/hapus/{id?}', [BlogController::class, 'hapus_blog']);
 });
 
 Route::group(['prefix' => 'v2/'.$key_absen.'/absen'], function(){

@@ -68,7 +68,7 @@
                     <li><a class="nav-link" href="{{route('rest_siswa')}}">Siswa</a></li>
                     <li><a class="nav-link" href="{{route('rest_absen')}}">Absensi</a></li>
                     <li><a class="nav-link" href="{{route('rest_keuangan')}}">Keuangan</a></li>
-                    <li><a class="nav-link" href="{{route('pengaturan')}}">Jurnal</a></li>
+                    <li><a class="nav-link" href="{{route('rest_jurnal')}}">Jurnal</a></li>
 
                 </ul>
             </li> 
