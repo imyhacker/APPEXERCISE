@@ -12,6 +12,7 @@
                 <a href="{{url('/')}}" class="nav-item nav-link">Home</a>
                 <a href="{{url('/about')}}" class="nav-item nav-link">About</a>
                 <a href="{{url('/blog')}}" class="nav-item nav-link">Blog</a>
+                <a href="{{url('/video')}}" class="nav-item nav-link">Video</a>
                 <a href="{{url('/gallery')}}" class="nav-item nav-link">Galery</a>
                 <a href="{{url('/contact')}}" class="nav-item nav-link">Contact</a>
                 @auth

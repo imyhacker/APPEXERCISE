@@ -6,10 +6,11 @@ use App\Models\Tag;
 use App\Models\Blog;
 use App\Models\Foto;
 use App\Models\User;
+use App\Models\Video;
 use App\Models\Pengaturan;
 use Illuminate\Http\Request;
-use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\PHPMailer;
 
 class ClientController extends Controller
 {
@@ -45,6 +46,20 @@ class ClientController extends Controller
         $tag = Tag::all();
         return view('Client/baca', compact('data', 'tag', 'terbaru', 'acak'));
     }
+    public function video()
+    {
+        $r = 'Video';
+        $video = Video::orderBy('id', 'desc')->simplePaginate(6);
+        return view('Client/video', compact('video', 'r'));
+
+    }
+    public function tonton($slug_video)
+    {
+        $data = Video::where('slug_video', $slug_video)->first();
+        return view('Client/tonton', compact('data'));
+    }
+
+
     public function gallery()
     {
         $pengaturan = Pengaturan::first();

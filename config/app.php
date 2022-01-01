@@ -168,7 +168,7 @@ return [
         Arikun\Stislasimple\StislaServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
-
+        Alaouy\Youtube\YoutubeServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -234,6 +234,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'Image' => Intervention\Image\Facades\Image::class,
+        'Youtube' => Alaouy\Youtube\Facades\Youtube::class,
     ],
 
 ];

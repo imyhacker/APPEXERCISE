@@ -13,7 +13,7 @@
                 <a href="{{url('/about')}}" class="nav-item nav-link">About</a>
                 <a href="{{url('/blog')}}" class="nav-item nav-link">Blog</a>
                 <a href="{{url('/video')}}" class="nav-item nav-link">Video</a>
-                <a href="{{url('/gallery')}}" class="nav-item nav-link">Gallery</a>
+                <a href="{{url('/gallery')}}" class="nav-item nav-link">Galery</a>
                 <a href="{{url('/contact')}}" class="nav-item nav-link">Contact</a>
                 @auth
                 <a href="{{url('/home')}}" class="nav-item nav-link">Dashboard</a>
@@ -33,17 +33,17 @@
         </div>
     </nav>
 
-    <div class="container-xxl bg-primary hero-header">
-        <div class="container px-lg-5">
-            <div class="row g-5 align-items-end">
-                <div class="col-lg-6 text-center text-lg-start">
-                    <h1 class="text-white mb-4 animated slideInDown">{{config('app.name')}}</h1>
-                    <p class="text-white pb-3 animated slideInDown">Exercise adalah salahsatu Ekstrakulikuler yang berada di SMK Telematika Indramayu, yang berfokuskan pada dunia komputer, IoT, Desain Grafis, Dan Programming.</p>
-                    <a href="{{url('/about')}}" class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Penasaran ?</a>
-                    <a href="{{url('/contact')}}" class="btn btn-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Ingin Bergabung ?</a>
-                </div>
-                <div class="col-lg-6 text-center text-lg-start">
-                    <img class="img-fluid animated zoomIn" src="{{asset('assets/img/hero.png')}}" alt="">
+    <div class="container-xxl py-5 bg-primary hero-header">
+        <div class="container my-5 px-lg-5">
+            <div class="row g-5 py-5">
+                <div class="col-12 text-center">
+                    <h1 class="text-white animated slideInDown" style="text-transform: uppercase">{{$data->judul_video}}</h1>
+                    <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="#">{{$data->tag_video}}</a></li>
+                        </ol>
+                    </nav>
                 </div>
             </div>
         </div>

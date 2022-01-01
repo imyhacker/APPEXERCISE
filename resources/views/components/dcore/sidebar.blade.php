@@ -45,6 +45,8 @@
                 <ul class="dropdown-menu">
                     <li><a class="nav-lin beep beep-sidebar" href="{{route('blog')}}">Blog</a></li>
                     <li><a class="nav-lin beep beep-sidebar" href="{{route('foto')}}">Foto Kegiatan</a></li>
+                    <li><a class="nav-lin beep beep-sidebar" href="{{route('video')}}">Video Tutorial</a></li>
+
                 </ul>
             </li>
             <li class="dropdown">

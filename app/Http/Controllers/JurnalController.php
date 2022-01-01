@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use Auth;
-use App\Models\Blog;
-use App\Models\Email;
-use App\Models\Foto;
+use Image;
 use App\Models\Tag;
+use App\Models\Blog;
+use App\Models\Foto;
+use App\Models\Email;
+use Alaouy\Youtube\Facades\Youtube;
+use App\Models\Video;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use Image;
 
 
 class JurnalController extends Controller
@@ -235,5 +237,38 @@ class JurnalController extends Controller
     }else{
         abort(404);
     }
+    }
+    public function video()
+    {
+        $tag = Tag::all();
+        $vide = Video::orderBy('id', 'desc')->get();
+        return view('Dashboard/Jurnal/video', compact('tag', 'vide'));
+    }
+    public function upload_video(Request $request)
+    {
+        $video = Youtube::getVideoInfo($request->input('id_youtube'));
+        if($video == FALSE){
+            return redirect()->back()->with('gagal', 'Data Video Tersebut Tidak Ada Di Youtube!');
+        }
+        $judul = $video->snippet->title;
+        $desk = $video->snippet->description; //description
+        $channel = $video->snippet->channelTitle; //channelTitle
+
+        $tag = $request->input('tag_video');
+        $Video = Video::create([
+            'judul_video' => $judul,
+            'deskripsi_video' => $desk,
+            'tag_video' => $tag,
+            'channel' => $channel,
+            'id_youtube' => $request->input('id_youtube'),
+            'slug_video' => Str::random(15),
+        ]);
+        return redirect()->back()->with('sukses', 'Video Baru Berhasil Di Masukan');
+    }
+    public function hapus_video($slug_video)
+    {
+        $data = Video::where('slug_video', $slug_video)->first()->delete();
+        return redirect()->back()->with('sukses', 'Video Baru Berhasil Di Hapus');
+
     }
 }

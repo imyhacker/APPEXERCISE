@@ -6,7 +6,6 @@ use App\Http\Controllers\KeuanganController;
 use App\Http\Controllers\PengaturanController;
 use App\Http\Controllers\RAController;
 use App\Http\Controllers\SiswaController;
-use Facade\FlareClient\Http\Client;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth as Ath;
 
@@ -25,11 +24,13 @@ use Illuminate\Support\Facades\Auth as Ath;
 //     return view('welcome');
 // });
 
-Route::group(['prefix' => '/'], function($slug_baca = NULL){
+Route::group(['prefix' => '/'], function($slug_baca = NULL, $slug_video = NULL){
     Route::get('/', [ClientController::class, 'index'])->name('index');
     Route::get('/about', [ClientController::class, 'about'])->name('about');
     Route::get('/blog', [ClientController::class, 'blog'])->name('blog');
     Route::get('/blog/{slug_blog}/baca', [ClientController::class, 'baca'])->name('baca', $slug_baca);
+    Route::get('/video', [ClientController::class, 'video'])->name('video');
+    Route::get('/video/{slug_video}/tonton', [ClientController::class, 'tonton'])->name('tonton', $slug_video);
     Route::get('/gallery', [ClientController::class, 'gallery'])->name('gallery');
     Route::get('/contact', [ClientController::class, 'contact'])->name('contact');
     Route::post('/send_mail', [ClientController::class, 'send_mail'])->name('send_mail');
@@ -62,7 +63,7 @@ Route::group(['prefix' => 'home/keuangan'], function(){
     Route::post('/data_keuangan/tambah_pengeluaran', [KeuanganController::class, 'tambah_pengeluaran'])->name('tambah_pengeluaran');
 });
 
-Route::group(['prefix' => 'home/jurnal'], function($slug_blog = NULL, $id = NULL, $slug_tag = NULL){
+Route::group(['prefix' => 'home/jurnal'], function($slug_blog = NULL, $id = NULL, $slug_tag = NULL, $slug_video = NULL){
     Route::get('/blog', [JurnalController::class, 'blog'])->name('blog');
 
     // TAG
@@ -83,6 +84,10 @@ Route::group(['prefix' => 'home/jurnal'], function($slug_blog = NULL, $id = NULL
     Route::get('/foto/{id}/edit', [JurnalController::class, 'edit_foto'])->name('edit_foto', $id);
     Route::post('/foto/{id}/edit/update_foto', [JurnalController::class, 'update_foto'])->name('update_foto', $id);
 
+    // VIDEO
+    Route::get('/video', [JurnalController::class, 'video'])->name('video');
+    Route::post('/video/upload_video', [JurnalController::class, 'upload_video'])->name('upload_video');
+    Route::get('/video/{slug_video}/hapus', [JurnalController::class, 'hapus_video'])->name('hapus_video', $slug_video);
 });
 
 
