@@ -38,7 +38,7 @@
                                 @foreach($terbaru as $trb)
                                 <li class="list-group-item">
                                     <a href="{{route('baca', $trb->slug_blog)}}">
-                                    <span class="badge" style="border-radius: 40; background-color: #6e0688">{{$trb->judul}}</span>
+                                    <span class="badge" style="border-radius: 40; background-color: #6e0688">{{Str::limit($trb->judul, 40, '...')}}</span>
                                 </a>
                                 </li>
                                 @endforeach
@@ -56,7 +56,7 @@
                                 @foreach($acak as $ack)
                                 <li class="list-group-item">
                                     <a href="{{route('baca', $ack->slug_blog)}}">
-                                    <span class="badge" style="border-radius: 40; background-color: #490688">{{$ack->judul}}</span>
+                                    <span class="badge" style="border-radius: 40; background-color: #490688">{{Str::limit($ack->judul, 40, '...')}}</span>
                                 </a>
                                 </li>
                                 @endforeach

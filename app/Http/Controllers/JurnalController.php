@@ -168,7 +168,7 @@ class JurnalController extends Controller
        $kegiatan = $request->input('kegiatan');
 
        $nama_gambar = Str::slug($foto->getClientOriginalName(). '_').date('_H_i_s_').'.'.$foto->getClientOriginalExtension();
-       $path = public_path('foto/');
+       $path = 'foto';
        $foto->move($path, $nama_gambar);
        $data = Foto::create([
         'judul' => $judul,
@@ -186,7 +186,6 @@ class JurnalController extends Controller
         if(Auth::user()->role == 'admin' || Auth::user()->role2 == 'sekertaris' || Auth::user()->role2 == 'ketua' || Auth::user()->role2 == 'wakil'){
 
         $gambar = Foto::find($id);
-        unlink(public_path('foto/'.$gambar->foto));
         $gambar->delete();
         return redirect()->back()->with('sukses', 'Foto Kegiatan Berhasil Di Hapus');
     }else{
@@ -223,7 +222,7 @@ class JurnalController extends Controller
             $gambar_id = Foto::find($id);
             unlink(public_path('foto/'.$gambar_id->foto));
             $nama_gambar = Str::slug($cek->getClientOriginalName(). '_').date('_H_i_s_').'.'.$cek->getClientOriginalExtension();
-            $path = public_path('foto/');
+            $path = 'foto';
             $cek->move($path, $nama_gambar);
             $data = Foto::find($id)->update([
                 'judul' => $judul,

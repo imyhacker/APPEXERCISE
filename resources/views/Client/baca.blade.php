@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<x-Client.head />
+<x-Client.head_baca :data="$data"/>
 
 <body>
     <div class="container-xxl bg-white p-0">
