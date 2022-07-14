@@ -61,6 +61,7 @@ Route::group(['prefix' => 'home/keuangan'], function(){
     Route::get('/data_keuangan', [KeuanganController::class, 'data_keuangan'])->name('data_keuangan');
     Route::post('/data_keuangan/tambah_pemasukan', [KeuanganController::class, 'tambah_pemasukan'])->name('tambah_pemasukan');
     Route::post('/data_keuangan/tambah_pengeluaran', [KeuanganController::class, 'tambah_pengeluaran'])->name('tambah_pengeluaran');
+    Route::get('/data_keuangan/reset_data_keuangan', [KeuanganController::class, 'reset_data_keuangan'])->name('reset_data_keuangan');
 });
 
 Route::group(['prefix' => 'home/jurnal'], function($slug_blog = NULL, $id = NULL, $slug_tag = NULL, $slug_video = NULL){

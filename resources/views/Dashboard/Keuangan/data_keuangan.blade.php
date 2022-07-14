@@ -27,6 +27,9 @@
                                             <i class="fas fa-arrow-up"></i> Pengeluaran
                                         </button>
                                     </div>
+                                    <div class="col-md-12 mt-3">
+                                       <a href="{{route('reset_data_keuangan')}}" class="btn btn-outline-warning btn-block"><i class="fas fa-backward"></i> Reset Data Keuangan</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -61,6 +64,7 @@
                                       <tr>
                                         <th>No</th>
                                         <th>Nama Pengisi</th>
+                                        <th>Dari</th>
                                         <th>Jumlah Pemasukan (Rp)</th>
                                         <th>Tanggal Pemasukan</th>
                                       </tr>
@@ -71,6 +75,7 @@
                                       <tr>
                                         <td>{{$no++}}</td>
                                         <td>{{$pm->name}}</td>
+                                        <td>{{$pm->dari}}</td>
                                         <td>Rp. {{number_format($pm->pemasukan)}},-</td>
                                         <td>{{$pm->created_at->format('l, d F Y')}}</td>
                                       </tr>
@@ -146,6 +151,10 @@
                         <div class="form-group">
                           <label>Total Pemasukan (Rp)</label>
                             <input type="number" class="form-control" placeholder="Ex: 12000" name="pemasukan">
+                        </div>
+                        <div class="form-group">
+                          <label>Pemasukan Dari</label>
+                            <input type="text" class="form-control" placeholder="Uang Kas" name="dari">
                         </div>
                     </div>
                     <div class="modal-footer">

@@ -16,6 +16,7 @@ class CreatePemasukansTable extends Migration
         Schema::create('pemasukan', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
+            $table->longText('dari')->nullable();
             $table->integer('pemasukan')->nullable();
             $table->timestamps();
         });

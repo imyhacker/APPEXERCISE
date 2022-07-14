@@ -32,6 +32,7 @@ class KeuanganController extends Controller
 
         $data = Pemasukan::create([
             'name' => Auth::user()->name,
+            'dari' => $request->input('dari'),
             'pemasukan' => $request->input('pemasukan'),
         ]);
         return redirect()->back()->with('sukses', 'Berhasil Menambahkan Pemasukan Sebesar Rp. '.number_format($request->input("pemasukan")));
@@ -58,5 +59,16 @@ class KeuanganController extends Controller
 
     }
     }
+    public function reset_data_keuangan()
+    {
+        if(Auth::user()->role == 'admin' || Auth::user()->role2 == 'bendahara' || Auth::user()->role2 == 'ketua'|| Auth::user()->role2 == 'wakil'){
 
+        $data = Pemasukan::Truncate();
+        
+        return redirect()->back()->with('sukses', 'Berhasil Reset Data Keuangan');
+        }else {
+            abort(404);
+
+        }
+        }
 }
